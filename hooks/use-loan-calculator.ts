@@ -48,8 +48,8 @@ export function useLoanCalculator() {
       // Simulate calculation time for better UX
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      const dp = (formData.otr * formData.dpPercentage) / 100
-      const principal = formData.otr - dp
+      const dp = (formData.otr * formData.dpPercentage) / 100 //dp
+      const principal = formData.otr - dp //pokok utang
       const interestRate = calculateInterestRate(formData.loanTermMonths)
       const loanDetails = calculateLoanDetails(principal, interestRate, formData.loanTermMonths)
 
